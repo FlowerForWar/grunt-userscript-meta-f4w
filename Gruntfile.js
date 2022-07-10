@@ -17,37 +17,32 @@ module.exports = function (grunt) {
     var dest = 'tmp/' + name + '_meta.js';
     userscript_meta[name] = {
       options: {
-        pkg: grunt.file.readJSON(file)
+        pkg: grunt.file.readJSON(file),
       },
-      dest: dest
+      dest: dest,
     };
   });
 
   // Project configuration.
   grunt.initConfig({
     jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
-      ],
+      all: ['Gruntfile.js', 'tasks/*.js', '<%= nodeunit.tests %>'],
       options: {
-        jshintrc: '.jshintrc'
-      }
+        jshintrc: '.jshintrc',
+      },
     },
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: ['tmp'],
     },
 
     'userscript-meta': userscript_meta,
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js']
-    }
-
+      tests: ['test/*_test.js'],
+    },
   });
 
   // Actually load this plugin's task(s).
@@ -61,5 +56,4 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['clean', 'userscript-meta', 'nodeunit']);
 
   grunt.registerTask('default', ['jshint', 'test']);
-
 };

@@ -1,27 +1,30 @@
-# grunt-userscript-meta
+# grunt-userscript-meta (fork)
 
 > Generate the userscript metadata-block with package.json
 
 ## Getting Started
+
 This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-userscript-meta --save-dev
+npm install grunt-userscript-meta-f4w --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-userscript-meta');
+grunt.loadNpmTasks('grunt-userscript-meta-f4w');
 ```
 
 ## The "userscript-meta" task
 
 ### Overview
+
 In your project's Gruntfile, add a section named `userscript-meta` to the data object passed into `grunt.initConfig()`.
 This plugins reads the information from the `package.json` where more can be added in a `userscript` object. The pkg object and a destination is required.
+
 ```js
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'), //global pkg
@@ -39,6 +42,7 @@ grunt.initConfig({
 ### Options
 
 #### options.pkg
+
 Type: `Object`
 Default value: The global pkg object.
 
@@ -79,6 +83,7 @@ The global pkg object can be overwritten for each task.
 ```
 
 #### pkg.userscript.name
+
 The name for the userscript will be taken from `pkg.name` but localization can be added via
 `pkg.userscript.name`.
 
@@ -106,6 +111,7 @@ The name for the userscript will be taken from `pkg.name` but localization can b
 ```
 
 #### pkg.userscript.description
+
 The same can be done for the description.
 
 ```javascript
@@ -132,6 +138,7 @@ The same can be done for the description.
 ```
 
 #### pkg.userscript.resource
+
 Resources can be added via `pkg.userscript.resource`
 
 ```javascript
@@ -159,6 +166,7 @@ Resources can be added via `pkg.userscript.resource`
 ```
 
 #### pkg.userscript.require
+
 This plugin can generate require urls for the specific userscript hosts (only greasyfork for now).
 
 ```javascript
@@ -188,6 +196,7 @@ This plugin can generate require urls for the specific userscript hosts (only gr
 ```
 
 #### pkg.userscript.other
+
 Every other metakey can be added via the `other` object which can be either a
 single value or an array.
 
@@ -217,8 +226,11 @@ single value or an array.
 ```
 
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
 ### 0.1.0
+
 Added functionality

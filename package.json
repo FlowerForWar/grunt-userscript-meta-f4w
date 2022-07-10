@@ -1,18 +1,18 @@
 {
-  "name": "grunt-userscript-meta",
-  "description": "Generate the userscript metadata-block with package.json",
+  "name": "grunt-userscript-meta-f4w",
+  "description": "(fork) Generate the userscript metadata-block with package.json",
   "version": "0.1.2",
-  "homepage": "https://github.com/Zod-/grunt-userscript-meta",
+  "homepage": "https://github.com/FlowerForWar/grunt-userscript-meta-f4w",
   "author": {
     "name": "Julian Hangstörfer",
     "email": "jhangstoerfer@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zod-/grunt-userscript-meta.git"
+    "url": "https://github.com/FlowerForWar/grunt-userscript-meta-f4w.git"
   },
   "bugs": {
-    "url": "https://github.com/Zod-/grunt-userscript-meta/issues"
+    "url": "https://github.com/FlowerForWar/grunt-userscript-meta-f4w/issues"
   },
   "license": "MIT",
   "engines": {
